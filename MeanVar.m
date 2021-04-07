@@ -1,4 +1,4 @@
-load COR
+load COR.mat
 [
     COR.ret ... Return Code; test this with Return_Message()
     COR.w ... Optimal weights
@@ -12,7 +12,7 @@ load COR
     COR.A, ... Constraint matrix m by n
     COR.L, ... lower bounds for assets then lower bounds for constraints
     COR.U, ... upper bounds for assets then upper bounds for constraints
-    COR.alpha, ... expected returns for asstes
+    COR.alpha, ... expected returns for assets
     COR.benchmark, ... benchmark weights
     Q, ... the covariance matrix if nfac is -1 (array length n*(n+1)/2; packed symmetric matrix)
     COR.gamma, ... the multiplier for return in the utility function is -gamma/(1-gamma) 
@@ -25,8 +25,8 @@ load COR
     COR.trades,... maximum desried number of non-zero trades
     COR.revise,... if revise is 1 we're doing a revision optimisation and initial must not be empty 
     COR.costs,... if costs is 0 ignore costs, if costs is 1 include costs, if costs is 2 include costs in  the budget constraint
-    COR.min_holding,... smallest non-zero asset weight, -1 means don't use
-    COR.min_trade,... smallest non-zero trade, -1 means don't use
+    COR.min_holding,... smallest non-zero asset weight, empty means don't use
+    COR.min_trade,... smallest non-zero trade, empty means don't use
     COR.ls,... if ls is 0 long only, if ls is 1 long short with long defining portfolio value, if ls is 2 long-short defines portfolio value
     COR.full,... if ls>0 upper portfolio value must be met
     COR.Rmin,... if ls>0 minimum short/long
