@@ -9,7 +9,7 @@ load COR
     COR.nfac, ... Number of factors (-1 for full covariance)
     COR.names, ... Asset Names
     COR.m, ... Number of linear constraints
-    COR.A, ... Constraint matrix 
+    COR.A, ... Constraint matrix m by n
     COR.L, ... lower bounds for assets then lower bounds for constraints
     COR.U, ... upper bounds for assets then upper bounds for constraints
     COR.alpha, ... expected returns for asstes
@@ -38,8 +38,8 @@ load COR
     COR.Composite,... matrix defining composite assets weights for each asset
     COR.LSValueU,... if ls>0 upper bound for portfolio value
     COR.npiece,... if npiece is 1 use piecewise costs
-    COR.hpiece,... matrix for x coordinates for piecewise costs for each asset
-    COR.pgrad,... matrix piecewise cost gradients for each asset
+    COR.hpiece,... matrix for x-coordinates for piecewise costs for each asset npiece by n
+    COR.pgrad,... matrix piecewise cost gradients for each asset npiece by n
     COR.nabs,... if ls>0 number of absolute constraints
     COR.Abs_A,... if ls>0 absolute constraint matrix for each asset
     COR.mabs,... number of linear constraints in A to be made absolute
